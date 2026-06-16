@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   # PostgreSQL 16 データベース
   db:
@@ -49,7 +47,10 @@ services:
     container_name: app-frontend
     restart: unless-stopped
     environment:
+      # ブラウザ（クライアントサイド）からのアクセス：ホスト経由
       NEXT_PUBLIC_API_BASE_URL: http://localhost:8080
+      # Server Action / Server Component からのアクセス：Docker 内部ネットワーク経由
+      API_BASE_URL: http://app-backend:8080
     ports:
       - "3000:3000"
     depends_on:
