@@ -1,0 +1,36 @@
+# Node / Next.js
+node_modules/
+.next/
+dist/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 環境変数
+.env
+.env.local
+.env.*.local
+frontend/.env
+frontend/.env.local
+frontend/.env*.local
+backend/.env
+backend/.env.local
+backend/.env*.local
+
+# Goビルド成果物
+backend/bin/
+backend/server
+
+# TypeScript ビルドキャッシュ
+*.tsbuildinfo
+frontend/tsconfig.tsbuildinfo
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
